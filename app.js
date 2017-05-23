@@ -7,8 +7,8 @@ angular.module('ngApp', ['ngMaterial'])
 .config(function($mdThemingProvider) {
   $mdThemingProvider
     .theme('default')
-    .primaryPalette('yellow')
-    .accentPalette('green')
+    .primaryPalette('grey')
+    .accentPalette('yellow')
     .warnPalette('red')
     .backgroundPalette('grey');
 })
