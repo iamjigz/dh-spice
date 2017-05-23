@@ -36,48 +36,47 @@
       <section class="module content">
         <div class="container">
           <!-- <h2>The Place</h2> -->
-          <p>The place has a vintage theme where customers can relax, chill and just have a good time.</p>
+          <p>Place Content Goes Here</p>
         </div>
       </section>
 
       <section class="module parallax parallax-2">
         <div class="container">
-          <h1>The Place</h1>
+          <h1>Great Place</h1>
         </div>
       </section>
 
       <section class="module content">
         <div class="container">
           <!-- <h2>The Food</h2> -->
-          <p>Food Content</p>
+          <p>Food Content Goes Here</p>
         </div>
       </section>
 
       <section class="module parallax parallax-3">
         <div class="container">
-          <h1>The Food</h1>
+          <h1>Great Food</h1>
         </div>
       </section>
 
       <section class="module content">
         <div class="container">
           <!-- <h2>The Staff</h2> -->
-          <p>SPICE Bar & Bistro's owners are siblings and are all graduates of Bachelor Science in Hotel & Restaurant Management.</p>
+          <p>Staff Content Goes Here</p>
         </div>
       </section>
 
-
       <section class="module parallax parallax-4">
         <div class="container">
-          <h1>The Staff</h1>
+          <h1>Great Staff</h1>
         </div>
       </section>
     </md-tab>
 
     <md-tab label="gallery">
-      <div ng-controller="CarouselCtrl" layout layout-align="center center">
+      <div ng-controller="GalleryCtrl" layout layout-align="center center" md-colors="::{background: 'default-primary'}">
         <div class='md-padding' layout="row" layout-wrap>
-          <md-card style="width: 350px; height: auto;" ng-repeat="image in images">
+          <md-card style="width: 400px; height: auto;" ng-repeat="image in images" md-colors="::{background: 'default-accent-300'}">
             <img src="{{image}}" class="md-card-image">
             <md-card-icon-actions layout="row" layout-align="end center">
               <md-button class="md-icon-button" aria-label="Favorite">
@@ -91,7 +90,7 @@
               </md-button>
             </md-card-icon-actions>
             <md-card-content>
-              <span>Pictures shared by customers.</span>
+              <span>Picture shown were shared by customers.</span>
             </md-card-content>
           </md-card>
         </div>
@@ -99,20 +98,94 @@
     </md-tab>
 
     <md-tab label="about">
+      <div ng-controller="AboutCtrl" layout="column">
+        <md-card md-colors="::{background: 'default-primary'}">
+          <md-card-header>
+            <md-card-header-text>
+              <span class="md-title">Located At:</span>
+              <span class="md-subhead">Ayala Highway Brgy. Balintawak Lipa City, Batangas 4217</span>
+            </md-card-header-text>
+          </md-card-header>
 
+          <md-content layout layout-align="center center">
+            <div class='md-padding' layout="row" layout-wrap>
+              <md-card style="width: 350px; height: 500px;" ng-repeat="image in images">
+                <img src="{{image}}" class="md-card-image">
+              </md-card>
+            </div>
+          </md-content>
+
+          <md-card-icon-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <i class="material-icons">favorite</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Like">
+              <i class="material-icons">thumb_up</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <i class="material-icons">share</i>
+            </md-button>
+          </md-card-icon-actions>
+
+          <md-card-content>
+            Text here
+          </md-card-content>
+        </md-card>
+
+        <md-card md-colors="::{background: 'default-primary'}">
+          <md-card-header>
+            <md-card-header-text>
+              <span class="md-title">Check out our menu!</span>
+            </md-card-header-text>
+          </md-card-header>
+
+          <md-content layout layout-align="center center">
+            <div class='md-padding' layout="row" layout-wrap>
+              <md-card style="width: 525px; height: auto;" ng-repeat="menu in menus">
+                <img src="{{menu}}" class="md-card-image">
+              </md-card>
+            </div>
+          </md-content>
+
+          <md-card-icon-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <i class="material-icons">favorite</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Like">
+              <i class="material-icons">thumb_up</i>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <i class="material-icons">share</i>
+            </md-button>
+          </md-card-icon-actions>
+
+          <md-card-content>
+            Text here
+          </md-card-content>
+        </md-card>
+      </div>
     </md-tab>
 
     <md-tab label="contact">
-      <h2>SPICE Bar & Bistro</h2>
-      <p>Located at Ayala Highway Brgy. Balintawak Lipa City, Batangas 4217</p>
-      <p>Contact number: 0916-352-6456</p>
+      <md-card md-colors="::{background: 'default-primary'}">
+        <img src="https://external.fmnl10-1.fna.fbcdn.net/static_map.php?v=29&amp;osm_provider=2&amp;size=820x242&amp;bbox=13.949470%2C121.148300%7C13.953470%2C121.164300&amp;markers=13.95147000%2C121.16030000&amp;language=en_US" class="md-card-image" alt="image caption">
+        <md-card-content>
+          <h2>SPICE Bar and Bistro</h2>
+          <p>Located at Ayala Highway Brgy. Balintawak Lipa City, Batangas 4217</p>
+          <p>Contact number: 0916-352-6456</p>
+        </md-card-content>
 
-      <a class="_3n4p" href="#" rel="dialog" ajaxify="/places/map/?id=1465951763437689&amp;zoom=15" id="u_jsonp_4_1" role="button">
-        <div class="_4j7v">
-          <img class="_a3f img" alt="" aria-label="Map attachment" src="https://external.fmnl10-1.fna.fbcdn.net/static_map.php?v=29&amp;osm_provider=2&amp;size=820x242&amp;bbox=13.949470%2C121.148300%7C13.953470%2C121.164300&amp;markers=13.95147000%2C121.16030000&amp;language=en_US"
-            width="820" height="242">
-        </div>
-      </a>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>
+            Call Us
+            <md-icon class="material-icons">call</md-icon>
+          </md-button>
+          <md-button>
+            Text Us
+            <md-icon class="material-icons">textsms</md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
     </md-tab>
   </md-tabs>
 </body>

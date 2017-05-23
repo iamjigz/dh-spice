@@ -4,8 +4,37 @@ angular.module('ngApp', ['ngMaterial'])
   $locationProvider.html5Mode(true);
 })
 
+// .config(function($mdThemingProvider) {
+//   $mdThemingProvider.theme('default')
+//   .primaryPalette('grey')
+//   .accentPalette('yellow')
+//   .warnPalette('red')
+//   .backgroundPalette('grey');
+// })
+
 .config(function($mdThemingProvider) {
-  $mdThemingProvider.theme('default').primaryPalette('grey').accentPalette('yellow').warnPalette('red').backgroundPalette('grey');
+  $mdThemingProvider.definePalette('black', {
+    '50': '000000',
+    '100': '000000',
+    '200': '000000',
+    '300': '000000',
+    '400': '000000',
+    '500': '000000',
+    '600': '000000',
+    '700': '000000',
+    '800': '000000',
+    '900': '000000',
+    'A100': '000000',
+    'A200': '000000',
+    'A400': '000000',
+    'A700': '000000',
+    'contrastDefaultColor': 'light'
+  })
+
+  $mdThemingProvider.theme('default')
+    .primaryPalette('black')
+    .accentPalette('yellow')
+    .backgroundPalette('yellow');
 })
 
 .controller('ParallaxCtrl', function($scope, $window) {
@@ -47,9 +76,9 @@ angular.module('ngApp', ['ngMaterial'])
   };
 })
 
-.controller('CarouselCtrl', function($scope) {
-  $scope.active = 'images/bar.jpg';
+.controller('GalleryCtrl', function($scope) {
   $scope.images = [
+    'images/bar.jpg',
     'images/staff.jpg',
     'images/food1.jpg',
     'images/food2.jpg',
@@ -60,6 +89,19 @@ angular.module('ngApp', ['ngMaterial'])
     'images/inside1.jpg',
     'images/place4.jpg',
     'images/place5.jpg',
+  ];
+})
+
+.controller('AboutCtrl', function($scope) {
+  $scope.images = [
+    'images/place1.jpg',
+    'images/place2.jpg',
+    'images/place3.jpg',
+  ];
+
+  $scope.menus = [
+    'images/menu1.jpg',
+    'images/menu2.jpg',
   ];
 })
 
