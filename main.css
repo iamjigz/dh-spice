@@ -98,3 +98,11 @@ section.module.parallax-4 {
     font-size: 120px;
   }
 }
+
+md-tabs .md-tab.md-active{
+    color: rgb(251, 236, 41);
+}
+
+md-tabs.md-default-theme .md-tab, md-tabs .md-tab{
+    color: rgba(255, 255, 255, 0.8);
+}

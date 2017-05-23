@@ -2,7 +2,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SPICE</title>
+  <title>SPICE Bar and Bistro</title>
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
@@ -27,7 +27,7 @@
 </head>
 
 <body ng-controller="ParallaxCtrl" ng-cloak>
-  <md-tabs md-dynamic-height md-border-bottom>
+  <md-tabs md-dynamic-height md-border-bottom md-colors="::{backgroundColor: 'default-primary', color: 'default-accent'}">
     <md-tab label="home">
       <section class="module parallax parallax-1">
         <div class="container"></div>
@@ -98,8 +98,8 @@
     </md-tab>
 
     <md-tab label="about">
-      <div ng-controller="AboutCtrl" layout="column">
-        <md-card md-colors="::{background: 'default-primary'}">
+      <div ng-controller="AboutCtrl" layout="column" md-colors="::{background: 'default-primary'}">
+        <md-card md-colors="::{background: 'default-accent-300'}">
           <md-card-header>
             <md-card-header-text>
               <span class="md-title">Located At:</span>
@@ -107,7 +107,7 @@
             </md-card-header-text>
           </md-card-header>
 
-          <md-content layout layout-align="center center">
+          <md-content layout layout-align="center center" md-colors="::{background: 'default-primary'}">
             <div class='md-padding' layout="row" layout-wrap>
               <md-card style="width: 350px; height: 500px;" ng-repeat="image in images">
                 <img src="{{image}}" class="md-card-image">
@@ -132,14 +132,14 @@
           </md-card-content>
         </md-card>
 
-        <md-card md-colors="::{background: 'default-primary'}">
+        <md-card md-colors="::{background: 'default-accent-300'}">
           <md-card-header>
             <md-card-header-text>
               <span class="md-title">Check out our menu!</span>
             </md-card-header-text>
           </md-card-header>
 
-          <md-content layout layout-align="center center">
+          <md-content layout layout-align="center center" md-colors="::{background: 'default-primary'}">
             <div class='md-padding' layout="row" layout-wrap>
               <md-card style="width: 525px; height: auto;" ng-repeat="menu in menus">
                 <img src="{{menu}}" class="md-card-image">
@@ -168,19 +168,25 @@
 
     <md-tab label="contact">
       <md-card md-colors="::{background: 'default-primary'}">
+        <md-card-header md-colors="::{color: 'default-accent-500'}">
+          <md-card-header-text>
+            <span class="md-title">Contact Us!</span>
+          </md-card-header-text>
+        </md-card-header>
+
         <img src="https://external.fmnl10-1.fna.fbcdn.net/static_map.php?v=29&amp;osm_provider=2&amp;size=820x242&amp;bbox=13.949470%2C121.148300%7C13.953470%2C121.164300&amp;markers=13.95147000%2C121.16030000&amp;language=en_US" class="md-card-image" alt="image caption">
-        <md-card-content>
+        <md-card-content md-colors="::{color: 'default-accent-500'}">
           <h2>SPICE Bar and Bistro</h2>
           <p>Located at Ayala Highway Brgy. Balintawak Lipa City, Batangas 4217</p>
           <p>Contact number: 0916-352-6456</p>
         </md-card-content>
 
         <md-card-actions layout="row" layout-align="end center">
-          <md-button>
+          <md-button class="md-accent md-raised">
             Call Us
             <md-icon class="material-icons">call</md-icon>
           </md-button>
-          <md-button>
+          <md-button class="md-accent md-raised">
             Text Us
             <md-icon class="material-icons">textsms</md-icon>
           </md-button>
