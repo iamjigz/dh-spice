@@ -4,14 +4,6 @@ angular.module('ngApp', ['ngMaterial'])
   $locationProvider.html5Mode(true);
 })
 
-// .config(function($mdThemingProvider) {
-//   $mdThemingProvider.theme('default')
-//   .primaryPalette('grey')
-//   .accentPalette('yellow')
-//   .warnPalette('red')
-//   .backgroundPalette('grey');
-// })
-
 .config(function($mdThemingProvider) {
   $mdThemingProvider.definePalette('black', {
     '50': '000000',
@@ -89,6 +81,10 @@ angular.module('ngApp', ['ngMaterial'])
     'images/inside1.jpg',
     'images/place4.jpg',
     'images/place5.jpg',
+    'images/review1.jpg',
+    'images/review2.jpg',
+    'images/review3.jpg',
+    'images/review4.jpg',
   ];
 })
 

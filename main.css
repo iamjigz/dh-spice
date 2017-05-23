@@ -66,27 +66,27 @@ section.module.parallax h1 {
 }
 
 section.module.parallax-1 {
-  background-image: url("images/bar.jpg");
-}
-
-section.module.parallax-2 {
   background-image: url("images/inside1.jpg");
 }
 
-section.module.parallax-3 {
+section.module.parallax-2 {
   background-image: url("images/food1.jpg");
 }
 
-section.module.parallax-4 {
+section.module.parallax-3 {
   background-image: url("images/staff.jpg");
+}
+
+section.module.parallax-4 {
+  background-image: url("images/logo.jpg");
 }
 
 @media all and (min-width: 600px) {
   section.module h2 {
-    font-size: 42px;
+    font-size: 36px;
   }
   section.module p {
-    font-size: 36px;
+    font-size: 24px;
   }
   section.module.parallax h1 {
     font-size: 96px;
