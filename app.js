@@ -5,15 +5,10 @@ angular.module('ngApp', ['ngMaterial'])
 })
 
 .config(function($mdThemingProvider) {
-  $mdThemingProvider
-    .theme('default')
-    .primaryPalette('grey')
-    .accentPalette('yellow')
-    .warnPalette('red')
-    .backgroundPalette('grey');
+  $mdThemingProvider.theme('default').primaryPalette('grey').accentPalette('yellow').warnPalette('red').backgroundPalette('grey');
 })
 
-.controller('appCtrl', function($scope, $window) {
+.controller('ParallaxCtrl', function($scope, $window) {
   function getSupportedPropertyName(properties) {
     for (var i = 0; i < properties.length; i++) {
       if (typeof document.body.style[properties[i]] !== 'undefined') {
@@ -50,8 +45,25 @@ angular.module('ngApp', ['ngMaterial'])
     layer2El.css(tranProperty, 'translate3d(0, ' + layer2Offset + 'px' + ', 0)');
 
   };
-}).directive('parallax', function($window) {
+})
 
+.controller('CarouselCtrl', function($scope) {
+  $scope.active = 'images/bar.jpg';
+  $scope.images = [
+    'images/staff.jpg',
+    'images/food1.jpg',
+    'images/food2.jpg',
+    'images/food3.jpg',
+    'images/food4.jpg',
+    'images/food5.jpg',
+    'images/three.jpg',
+    'images/inside1.jpg',
+    'images/place4.jpg',
+    'images/place5.jpg',
+  ];
+})
+
+.directive('parallax', function($window) {
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationF,
 
     count = 0,
