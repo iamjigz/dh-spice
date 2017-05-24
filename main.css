@@ -90,6 +90,7 @@ section.module.parallax-4 {
   }
   section.module.parallax h1 {
     font-size: 96px;
+    color: rgba(251, 236, 41, 0.6);
   }
 }
 
