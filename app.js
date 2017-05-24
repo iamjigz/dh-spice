@@ -101,6 +101,17 @@ angular.module('ngApp', ['ngMaterial'])
   ];
 })
 
+.controller('FooterCtrl', function($scope) {
+  $scope.social = {
+    portfolio: "https://iamjigz.github.io/jigz/",
+    facebook: "https://www.facebook.com/jigzimon",
+    linkedin: "https://www.linkedin.com/in/jigno-alfred-venezuela-757600b3/",
+    github: "https://github.com/iamjigz",
+    codepen: "http://codepen.io/iamjigz/",
+    stack_overflow: "http://stackoverflow.com/users/4918036/jigno-alfred-venezuela"
+  };
+})
+
 .directive('parallax', function($window) {
   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationF,
 

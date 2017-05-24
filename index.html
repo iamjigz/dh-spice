@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="main.css">
 
   <!-- Angular Material requires Angular.js Libraries -->
@@ -38,8 +38,7 @@
       <section class="module content">
         <div class="container">
           <h2>SPICE Bar and Bistro</h2>
-          <p>provides its customers with an ambiance that is perfect for a typical get together.
-             The place is so inviting and so unintimidating it attracts the dining as well as the family crowd.</p>
+          <p>We aim to provide our customers with an ambiance that is perfect for a typical get together. The place is so inviting and so unintimidating it attracts the dining as well as the family crowd.</p>
         </div>
       </section>
 
@@ -51,9 +50,8 @@
 
       <section class="module content">
         <div class="container">
-          <h2>Our Menu</h2>
-          <p>is packed with scrumptious food ranging from Grilled Seafood,
-             Filipino and Asian favorites and tastefully prepared beermates and Pica-Pica.</p>
+          <h2>Our Food</h2>
+          <p>We are offering different kinds of food with a variety of flavors that will surely satisfy our customers. SPICE believes that consistency is key and by that, we are giving our 100% by serving high quality food everytime.</p>
         </div>
       </section>
 
@@ -66,7 +64,7 @@
       <section class="module content">
         <div class="container">
           <h2>Our Staff</h2>
-          <p>aims to provide customers with excellent service and provide total customer satisfaction with our delectable variety of food and beverages.</p>
+          <p>We will surely accommodate and assist you in everything that you need. Our place is not just an establishment with four walls but a place that consists of a friendly staff, who will make you feel at home and comfortable.</p>
         </div>
       </section>
 
@@ -131,7 +129,8 @@
           </md-card-icon-actions>
 
           <md-card-content>
-            Text here
+            <span>We are located in Lipa City - a first class component city in the province of Batangas in the Philippines.
+                  It is a recreational, religious, commercial, industrial and educational center.</span>
           </md-card-content>
         </md-card>
 
@@ -163,7 +162,8 @@
           </md-card-icon-actions>
 
           <md-card-content>
-            Text here
+            <span>We are offering different kinds of food with a variety of flavors that will surely satisfy our customers.
+               SPICE believes that consistency is key and by that, we are giving our 100% by serving high quality food everytime.</span>
           </md-card-content>
         </md-card>
       </div>
@@ -201,6 +201,42 @@
       </md-card>
     </md-tab>
   </md-tabs>
+
+  <footer ng-controller="FooterCtrl"layout="column" layout-align="center center" md-colors="::{background: 'default-primary-300'}">
+    <md-content layout="row" layout-align="center center" layout-margin md-colors="::{background: 'default-primary-300'}">
+      <span class="md-caption">Built by</span>
+      <a ng-href="{{social.portfolio}}" class="md-subhead" md-colors="::{color: 'default-accent-300'}">
+        Jigno Alfred V. Venezuela
+      </a>
+      <span class="md-caption">2017</span>
+    </md-content>
+    <div>
+      <md-button class="md-accent" ng-href="{{social.facebook}}" target="_blank">
+        <md-tooltip md-direction="top">Facebook</md-tooltip>
+        <i class="fa fa-2x fa-facebook-square"></i>
+      </md-button>
+
+      <md-button class="md-accent" ng-href="{{social.linkedin}}" target="_blank">
+        <md-tooltip md-direction="top">LinkedIn</md-tooltip>
+        <i class="fa fa-2x fa-linkedin-square"></i>
+      </md-button>
+
+      <md-button class="md-accent" ng-href="{{social.github}}" target="_blank">
+        <md-tooltip md-direction="top">Github</md-tooltip>
+        <i class="fa fa-2x fa-github-alt"></i>
+      </md-button>
+
+      <md-button class="md-accent" ng-href="{{social.codepen}}" target="_blank">
+        <md-tooltip md-direction="top">Codepen</md-tooltip>
+        <i class="fa fa-2x fa-codepen"></i>
+      </md-button>
+
+      <md-button class="md-accent" ng-href="{{social.stackoverflow}}" target="_blank">
+        <md-tooltip md-direction="top">Stack Overflow</md-tooltip>
+        <i class="fa fa-2x fa-stack-overflow"></i>
+      </md-button>
+    </div>
+  </footer>
 </body>
 
 </html>
